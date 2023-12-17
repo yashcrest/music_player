@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Lato',  sans-serif;
 }
 
 body {
@@ -10,14 +13,24 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-}
+} 
 
+.song-one {
+    background-image: linear-gradient(to bottom right, rgba(255, 132, 0, 0.781), rgba(194, 172, 0, 0.858)) ;
+}
+.song-two {
+    background-image: linear-gradient(to bottom right, pink, red, yellow) ;
+}
+.song-three {
+    background-image: linear-gradient(to bottom right, red, yellow, grey) ;
+}
 .music-player-body {
     margin: 1em;
     border: 1px solid black;
     border-radius: 5px;
     display: flex;
     padding: 1em;
+    background-color: #fff;
 
 }
 
