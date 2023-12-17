@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato',  sans-serif;
+    font-family: 'Rubik Scribble', sans-serif;
 }
 
 body {
@@ -15,6 +15,7 @@ body {
     height: 100vh;
 } 
 
+/* gradient background based on the song playing */
 .song-one {
     background-image: linear-gradient(to bottom right, rgba(255, 132, 0, 0.781), rgba(194, 172, 0, 0.858)) ;
 }
@@ -24,23 +25,25 @@ body {
 .song-three {
     background-image: linear-gradient(to bottom right, red, yellow, grey) ;
 }
+
+
 .music-player-body {
     margin: 1em;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 20px;
     display: flex;
     padding: 1em;
     background-color: #fff;
-
+    position: relative;
 }
 
-
 #albumn_art {
-    height: 200px;
-    width: 200px;
+    height: 150px;
+    width: 150px;
     border-radius: 100px;
     object-fit: cover; 
     object-position: center;
+    position: absolute;
 }
 
 .hidden {
