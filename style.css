@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column ;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.music-player-body {
+    margin: 1em;
+    border: 1px solid black;
+    border-radius: 5px;
+    display: flex;
+    padding: 1em;
+
+}
+
+
+#albumn_art {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+    object-fit: cover; 
+    object-position: center;
+}
+
+.hidden {
+    display: none;
+}
