@@ -17,24 +17,28 @@ body {
 
 /* gradient background based on the song playing */
 .song-one {
-    background-image: linear-gradient(to bottom right, rgba(255, 132, 0, 0.781), rgba(194, 172, 0, 0.858)) ;
+    background-image: linear-gradient(to bottom right, rgba(255, 132, 0, 0.781),  rgba(194, 172, 0, 0.858)) ;
 }
 .song-two {
     background-image: linear-gradient(to bottom right, pink, red, yellow) ;
 }
 .song-three {
-    background-image: linear-gradient(to bottom right, red, yellow, grey) ;
+    background-image: linear-gradient(to bottom right, rgb(255, 102, 59), rgb(201, 201, 37), rgb(157, 225, 86)) ;
 }
 
+h1 {
+    color: #fff;
+}
 
 .music-player-body {
+    display: flex;
     margin: 1em;
+    padding: 1em;
     border: 1px solid black;
     border-radius: 20px;
-    display: flex;
-    padding: 1em;
     background-color: #fff;
     position: relative;
+    box-shadow: 10px 10px 20px rgba(252, 169, 169, 0.781);
 }
 
 #albumn_art {
