@@ -31,23 +31,29 @@ h1 {
 }
 
 .music-player-body {
-    display: flex;
     margin: 1em;
     padding: 1em;
+    position: relative;
+    display: flex;
     border: 1px solid black;
     border-radius: 20px;
     background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(38, 209, 0, 0.846);
+}
+
+.albumn_container {
     position: relative;
-    box-shadow: 10px 10px 20px rgba(252, 169, 169, 0.781);
+    width: 110px;
 }
 
 #albumn_art {
-    height: 150px;
-    width: 150px;
-    border-radius: 100px;
+    position: absolute;
+    height: 110px;
+    border-radius: 50%;
     object-fit: cover; 
     object-position: center;
-    position: absolute;
+    top: 0;
+    left: 0;
 }
 
 .hidden {
