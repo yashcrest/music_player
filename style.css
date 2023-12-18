@@ -31,8 +31,8 @@ h1 {
 }
 
 .music-player-body {
-    margin: 1em;
-    padding: 1em;
+    margin: 100px 0;
+    padding: 20px 30px;
     position: relative;
     display: flex;
     border: 1px solid black;
@@ -48,6 +48,7 @@ h1 {
 
 #albumn_art {
     position: absolute;
+    width: inherit;
     height: 110px;
     border-radius: 50%;
     object-fit: cover; 
