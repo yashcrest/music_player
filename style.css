@@ -4,6 +4,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+h1 {
     font-family: 'Rubik Scribble', sans-serif;
 }
 
@@ -32,7 +35,7 @@ h1 {
 
 .music-player-body {
     margin: 100px 0;
-    padding: 20px 30px;
+    padding: 30px 30px;
     position: relative;
     display: flex;
     border: 1px solid black;
@@ -43,20 +46,74 @@ h1 {
 
 .albumn_container {
     position: relative;
-    width: 110px;
+    width: 100px;
 }
 
 #albumn_art {
     position: absolute;
     width: inherit;
-    height: 110px;
+    height: 100px;
     border-radius: 50%;
     object-fit: cover; 
     object-position: center;
-    top: 0;
-    left: 0;
+    bottom: 0;
+    left: 0; 
+    animation: rotate 2s linear infinite;
+    animation-play-state: paused;
 }
+
+.music-player-body.play #albumn_art {
+    animation-play-state: running;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.music-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+
+.action-btn {
+    background-color: white;
+    border: 0;
+    color: #dfdbdf;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 10px;
+    margin: 0 20px;
+}
+
+.action-btn-big {
+    color: #cdc2d0;
+    font-size: 30px;
+}
+
+.music-info {
+    background-color: rgba(255, 255, 255, 0.5);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; 
+    border-radius: 15px 15px 0 0;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    width: calc(100% -40%);
+    /* opacity: 0; */
+    transform: translateY(0%);
+}
+
+
 
 .hidden {
     display: none;
 }
+
