@@ -62,6 +62,7 @@ h1 {
     animation-play-state: paused;
 }
 
+/* adding the play class will animate the albumn artwork */
 .music-player-body.play #albumn_art {
     animation-play-state: running;
 }
@@ -100,18 +101,44 @@ h1 {
 }
 
 .music-info {
+    padding: 10px 10px 10px 150px;
     background-color: rgba(255, 255, 255, 0.5);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ; 
     border-radius: 15px 15px 0 0;
     position: absolute;
     top: 0;
     left: 20px;
-    width: calc(100% -40%);
+    width: calc(100% - 40px);
     /* opacity: 0; */
     transform: translateY(0%);
+    transition: transform 0.3s ease-in, opacity 0.3s ease-in;
 }
 
+.music-info h4 {
+    margin: 0 ;
+}
 
+.music-player-body.play .music-info {
+    opacity: 1;
+    transform: translateY(-100%);
+}
+
+.progress-container {
+    background: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 0;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background-color: #fe8daa;
+    border-radius: 5px;
+    height: 100%;
+    width: 0;
+    transition: width 0.1s linear;
+}
 
 .hidden {
     display: none;
