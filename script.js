@@ -9,6 +9,28 @@ const songTitlte = document.querySelector("#song-title");
 const albumnArt = document.querySelector("#albumn-art");
 
 //songs list
+const songs = [
+  "tune_1",
+  "tune_2",
+  "tune_3",
+  "tune_4",
+  "tune_5",
+  "tune_6",
+  "tune_7",
+];
+
+// keeping track of songs
+let songIndex = 2;
+
+// initially load songs
+loadSong(songs(songIndex));
+
+//update songs details
+function loadSong(song) {
+  songTitlte.innerText = song;
+  audio.src = `tunes_sample/${song}.wav`;
+  albumnArt.src = `images/${song}.jpg`;
+}
 
 // play song
 function playSong() {
