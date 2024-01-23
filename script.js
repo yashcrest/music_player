@@ -22,7 +22,7 @@ const songs = [
 // keeping track of songs
 let songIndex = 2;
 
-// initially load songs
+// initially load songs into DOM
 loadSong(songs(songIndex));
 
 //update songs details
@@ -47,10 +47,10 @@ function pauseSong() {
 }
 
 //next song
-function prevBtn() {}
+function prevSong() {}
 
 //prev song
-function nextBtn() {}
+function nextSong() {}
 
 //event listener
 playBtn.addEventListener("click", () => {
