@@ -20,10 +20,10 @@ const songs = [
 ];
 
 // keeping track of songs
-let songIndex = 2;
+let songIndex = 4;
 
 // initially load songs into DOM
-loadSong(songs(songIndex));
+loadSong(songs[songIndex]);
 
 //update songs details
 function loadSong(song) {
@@ -37,6 +37,8 @@ function playSong() {
   musicPlayerBody.classList.add("play");
   playBtn.querySelector("i.fa-solid").classList.remove("fa-play");
   playBtn.querySelector("i.fa-solid").classList.add("fa-pause");
+
+  audio.play();
 }
 
 //pause song
@@ -44,13 +46,37 @@ function pauseSong() {
   musicPlayerBody.classList.remove("play");
   playBtn.querySelector("i.fa-solid").classList.add("fa-play");
   playBtn.querySelector("i.fa-solid").classList.remove("fa-pause");
+
+  audio.pause();
 }
 
 //next song
-function prevSong() {}
+function prevSong() {
+    songIndex -- ; 
+    
+    //checking if the song index goes to smaller than the array size
+    if(songIndex < 0 ) {
+        songIndex = songs.length - 1
+    }
+
+    loadSong(songs[songIndex]);
+    
+    playSong();
+}
 
 //prev song
-function nextSong() {}
+function nextSong() {
+    songIndex ++ ;
+
+    // checking if songIndex is greater than the actual size of array
+    if(songIndex > songs.length - 1) {
+        songIndex = 0
+    }
+
+    loadSong(songs[songIndex]);
+
+    playSong();
+}
 
 //event listener
 playBtn.addEventListener("click", () => {
@@ -63,3 +89,7 @@ playBtn.addEventListener("click", () => {
     playSong();
   }
 });
+
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click' , nextSong);
+
