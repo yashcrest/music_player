@@ -20,7 +20,7 @@ const songs = [
 ];
 
 // keeping track of songs
-let songIndex = 4;
+let songIndex = 0;
 
 // initially load songs into DOM
 loadSong(songs[songIndex]);
@@ -89,6 +89,7 @@ playBtn.addEventListener("click", () => {
     playSong();
   }
 });
+
 
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click' , nextSong);
