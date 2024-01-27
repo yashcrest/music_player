@@ -42,7 +42,7 @@ function playSong() {
 }
 
 //pause song
-function pauseSong() {
+function pauseSong() { 
   musicPlayerBody.classList.remove("play");
   playBtn.querySelector("i.fa-solid").classList.add("fa-play");
   playBtn.querySelector("i.fa-solid").classList.remove("fa-pause");
