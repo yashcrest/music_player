@@ -78,6 +78,18 @@ function nextSong() {
     playSong();
 }
 
+
+//update progress bar
+function updateProgress(e) {
+  const {duration, currentTime} = e.srcElement;
+  const progressPercent = (currentTime / duration) * 100;
+  progress.style.width = `${progressPercent}%`;
+}
+
+//set progress bar
+function setProgress(e) {
+}
+
 //event listener
 playBtn.addEventListener("click", () => {
   // getting to see, if the music is playing or paused
@@ -90,7 +102,13 @@ playBtn.addEventListener("click", () => {
   }
 });
 
-
+// change songs listener
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click' , nextSong);
 
+
+//update song progress bar
+audio.addEventListener('timeupdate' , updateProgress);
+
+//click on progress bar
+progressContainer.addEventListener('click', setProgress);
