@@ -86,9 +86,16 @@ function updateProgress(e) {
   progress.style.width = `${progressPercent}%`;
 }
 
-//set progress bar
+//setting the progress bar
 function setProgress(e) {
+  const width = this.clientWidth; // this will give you a number in pixels of the client width.
+  // console.log(width);
+  const clickX = e.offsetX;
+  const duration = audio.duration; // total duration of song
+  audio.currentTime = (clickX / width) * duration;
 }
+
+
 
 //event listener
 playBtn.addEventListener("click", () => {
